@@ -1,0 +1,21 @@
+|= EG(Pwait -> AX(AF(~Pwait))).
+The formula is TRUE.
+
+time:  (0 0)
+
+|= AG(~Pwait & Tresp) & AG(Pwait & ~Tresp).
+The formula is FALSE.
+
+time:  (0 0)
+
+|= AG(~Pmoderate & Taddp).
+The formula is FALSE.
+
+time:  (0 0)
+
+|= EF(Tdelp & ~Plisten)..
+The formula is FALSE.
+
+time:  (0 0)
+
+|= End of session.

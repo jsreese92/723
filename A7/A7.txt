@@ -1,0 +1,11 @@
+4. Is it possible for someone to be suspended indefinitely?
+EG(Pwait -> AX(AF(~Pwait))). (expect “TRUE”)
+
+5. Can you restore somebody when nobody was previously suspended?
+AG(~Pwait & Tresp) & AG(Pwait & ~Tresp). (expect “FALSE”)
+
+6. Can somebody be added if there is no moderator?
+AG(~Pmoderate & Taddp). (expect “FALSE”)
+
+7. Can the moderator delete all the listeners?
+EF(Tdelp & ~Plisten). (expect “FALSE”)

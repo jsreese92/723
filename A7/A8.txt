@@ -1,0 +1,16 @@
+Dining philosophers
+
+(a) There can never be two philosopher eating at the same time.
+EF(EF(Peating1 & Peating2) | EF(Peating2 & Peating3) | EF(Peating1& Peating3)) expect FALSE
+
+(b) It is possible to for only one philosopher to be thinking
+EF((Pthinking1 & ~Pthinking2 & ~Pthinking3) | (~Pthinking1 & ~Pthinking2 & Pthinking3) | (~Pthinking1 & Pthinking2 & ~Pthinking3)) expect False
+
+(c) It is impossible that any philosopher is starved... i.e., fails to get two forks to eat.
+AG(~TgrabForks1 -> AX(EF(~TgrabForks1))) Expect True (he can not have forks, and on the next state still doesn’t get forks, so it’s true that he can be starved)
+
+(d) There is no chance that once a philosopher gets the forks it eats forever and never gives up the forks
+AG(TgrabForks1 -> AX(AF(~TreleaseForks1))) expect true (philosopher grabs the forks, there are states where he doesn’t release the forks right after so true)
+
+(e) It is impossible for all philosophers to always think and never eat
+EF((Pthinking1 & Pthinking2 & Pthinking3) -> AX(AF(Pthinking1 & Pthinking2 & Pthinking3))) expect True
