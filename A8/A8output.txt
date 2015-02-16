@@ -1,0 +1,26 @@
+|= EF(EF(Peating1 & Peating2) | EF(Peating2 & Peating3) | EF(Peating1& Peating3)).
+The formula is FALSE.
+
+time:  (0 0)
+
+|= EF((Pthinking1 & ~Pthinking2 & ~Pthinking3) | (~Pthinking1 & ~Pthinking2 & Pthinking3) | (~Pthinking1 & Pthinking2 & ~Pthinking3)).
+The formula is FALSE.
+
+time:  (0 0)
+
+|= AG(~TgrabForks1 -> AX(EF(~TgrabForks1))).
+The formula is TRUE.
+
+time:  (0 0)
+
+|= AG(TgrabForks1 -> AX(AF(~TreleaseForks1))).
+The formula is TRUE.
+
+time:  (0 0)
+
+|= EF((Pthinking1 & Pthinking2 & Pthinking3) -> AX(AF(Pthinking1 & Pthinking2 & Pthinking3))).
+The formula is TRUE.
+
+time:  (0 0)
+
+|=
