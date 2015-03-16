@@ -32,5 +32,13 @@ class DoMain {
     System.out.println("\nnew garden factory... vegetables"); 
     System.out.println(" >> center: " + plot.getCenter().getName());
 
+    plot = gfacA.getGarden("default");
+    if (plot == null) System.out.println("veggie garden already created");
+    plot = gfacA.getGarden("Herb");
+    if (plot == null) System.out.println("herb garden already created");
+    plot = gfacA.getGarden("Flower");
+    if (plot == null) System.out.println("flower garden already created");
+
+
   }
 }
