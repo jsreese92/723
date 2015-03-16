@@ -1,3 +1,9 @@
+/* 
+   Jordan Reese
+   COMP 723: Assignment 9
+   Due 3-15
+*/
+
 import java.io.*;
 
 // factory method pattern
