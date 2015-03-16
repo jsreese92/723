@@ -1,3 +1,10 @@
+/*
+   Jordan Reese
+   COMP 723: Assignment 9
+   Due 3-15
+*/
+
+
 class GardenMaker {
   //Abstract Factory which returns one of three gardens
   private static boolean made = false;
