@@ -22,9 +22,9 @@ class GardenMaker {
   }
 
   public Garden getGarden(String gtype) {
-    gd = new VeggieGarden(); //default
-    if(gtype.equals("Flower")) gd = new FlowerGarden();
-    if(gtype.equals("Herb")) gd = new HerbGarden();
+    if (gtype.equals("Flower")) gd = FlowerGarden.FloInstance();
+    else if (gtype.equals("Herb")) gd = HerbGarden.HerInstance();
+    else gd = VeggieGarden.VegInstance(); // default
     return gd;
   }
 }
