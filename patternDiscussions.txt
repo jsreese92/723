@@ -1,0 +1,88 @@
+Jordan Reese
+COMP 723
+Spring 2015
+
+Singleton:
+  The first thing that comes to mind is just a regular factory,
+  it seems quite advantageous to only have one object be able to create
+  instances of itself in certain designs. 
+
+Factory:
+  The factory pattern allows for a developer to more easily choose which instantiation
+  of an object should be used in a given situation. Given an interface and a factory
+  that produces for that interface, it is easy to choose the correct object for a 
+  situation.
+
+Abstract Factory:
+  1) If it's just one possible object that can be created by the Abstract Factory, 
+  then yes the Factory Method can only create an object in one way. But if the Abstract
+  Factory is part of an interface, then any object that extends that can be used.
+
+  2) I can't find the maze factory example
+
+  3) I can't find the MakeRoom example
+
+Composite:
+  1) The Composite pattern can be used to pass an object that is actually a composition
+  of itself, provided it is a sub-class. This allows for other processes to expect
+  an interface rather than a specific object. 
+
+  2) The Composite pattern certainly couldn't hurt in this case. 
+
+Bridge:
+  Bridge is used when you want to avoid a permanent binding between an abstraction and its implementation. 
+  The Strategy pattern, on the other hand, is used when many related classes differ only in their behavior.
+
+Adapter:
+  Yes, this would be useful for the same reasons that Proxys are useful. Decoupling an API and an implementation
+  is always good programming practice. Yes, it would more or less be a Proxy. 
+
+Flyweight:
+  1) If lots of similar objects are passes around an internal messaging system, abstracting away only the relevant
+  differnet parts would be an example of flyweight.
+
+  2) Depending on how much computation each is doing, flyweight is perfectly acceptable for objects in the thousands,
+  hundreds, or tens
+
+Decorator:
+  No that's what decorators are for, to add additional functionality to a base object. If a decorator didn't conform
+  to the orignal object's interface, then other objects would not be able to interact with the extended object. 
+
+Chain:
+  1) The Chain of Responsibility allows for one to break at any link in the chain. Decorators occur all at once, 
+  whereas chains are essentially executing one at a time.
+
+  2) Yes, understanding the underlying implementation of a pattern can only help one in understanding
+  its uses. 
+
+Proxy:
+  Yes, using a proxy simplifies code when an object is trying to communicate with an interface that may or may
+  not have been instantiated yet. 
+
+Template method:
+  Using object composition may lead to increased complexity for the Template Method, where it is actually trying
+  to abstract features away from the base class. Conceptually, it should work fine though. 
+
+Memento:
+  The caretaker might need to be able to see how large a memento is so it doesn't run out of memory and/or
+  incur large storage costs.
+  
+Strategy:
+  1) Since strategies are used when classes differ only in behavior, perhaps using a flyweight scheme
+  would be more resource-friendly, keeping track only of the differences of each strategy instantiation. 
+
+  2) Rather than passing the whole context object, just pass the relevant bits of the context object to
+  the strategy. If it is not available from the context's interface, use getters and setters. 
+
+Observer:
+  1) The Observer should have no influence on the Subject.
+
+  2) A system that uses the Observer pattern extensively separates the display, calculation, and storage of data.
+  First I would verify the data was correct, that it was being stored correctly, then it was being displayed correctly.
+
+  3) I can't find the Unregister() message or Notify() message, but I imagine locking resources would suffice to 
+  account for concurrency. 
+
+Command:
+  The state information will have to be stored somewhere, presumably in the MenuItems since they are what execute
+  the commands. 
